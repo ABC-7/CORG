@@ -1,6 +1,3 @@
-count('N', 14).
-count('A', 4).
-count('C', 3).
 noun(1,'the regulator mode').
 noun(2,'the output regulator status').
 noun(3,'the signal').
@@ -19,12 +16,12 @@ verbFrame(2,'A','set',['to','']).
 verbFrame(3,'A','initialize',['to','v']).
 verbFrame(1,'C','equal',['v']).
 verbFrame(2,'C','is',['v']).
-value('INIT').
-value('NORMAL').
-value('Status_On').
-value('FAILED').
-value('ok').
-value('Control_Off').
-value('True').
-value('False').
+sysValue('INIT').
+sysValue('NORMAL').
+sysValue('Status_On').
+sysValue('FAILED').
+sysValue('ok').
+sysValue('Control_Off').
+sysValue('True').
+sysValue('False').
 property('mode').
