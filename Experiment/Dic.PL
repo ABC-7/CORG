@@ -21,8 +21,8 @@ verbFrame(4,'A','move', ['up']).
 verbFrame(5,'C','exceed', ['']).
 verbFrame(6,'C','equal', ['v']).
 verbFrame(7,'C','be', ['v']).
-value('[True]').
-value('[False]').
-value('[On]').
-value('[Off]').
+sysValue('[True]').
+sysValue('[False]').
+sysValue('[On]').
+sysValue('[Off]').
 property('index').
