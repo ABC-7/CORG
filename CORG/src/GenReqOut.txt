@@ -1,0 +1,231 @@
+Req-1: after the output regulator status that equals 2 equals INIT for 18 seconds , the signal whose mode is 4  shall be initialized to INIT  every 22 seconds  .
+[
+comp( 
+[ 
+subComp(actScope, Nil, after, the output regulator status, equals, [INIT, ], after the output regulator status equals INIT ),
+subComp(hidden, the output regulator status, that, Nil, equals, [2, ], the output regulator status that equals 2 ),
+subComp(v-time, for, , 18, seconds, [],  for 18 seconds)
+] ),
+
+comp( 
+[ 
+subComp(act, Nil, Nil, the signal, shall be initialized, [INIT, ], the signal shall be initialized to INIT),
+subComp(hidden, the signal, whose, mode, is, [4, ], the signal whose mode is 4 ),
+subComp(in-time, every, , 22, seconds, [],  every 22 seconds)
+] )
+
+]
+===========================================
+
+Req-2: the monitor mode that is 8  shall be set to INIT  within 19 miliseconds every at most 2 miliseconds  .
+[
+comp( 
+[ 
+subComp(act, Nil, Nil, the monitor mode, shall be set, [INIT, ], the monitor mode shall be set to INIT),
+subComp(hidden, the monitor mode, that, Nil, is, [8, ], the monitor mode that is 8 ),
+subComp(pre-time, within, , 19, miliseconds, [],  within 19 miliseconds),
+subComp(in-time, every, at most, 2, miliseconds, [],  every at most 2 miliseconds)
+] )
+
+]
+===========================================
+
+Req-3: the output monitor status whose mode equals 1  shall be initialized to INIT  , when the output regulator status is  INIT , if the regulator init timeout whose mode is 8 equals NORMAL  .
+[
+comp( 
+[ 
+subComp(act, Nil, Nil, the output monitor status, shall be initialized, [INIT, ], the output monitor status shall be initialized to INIT),
+subComp(hidden, the output monitor status, whose, mode, equals, [1, ], the output monitor status whose mode equals 1 )
+] ),
+
+comp( 
+[ 
+subComp(trig, Nil, when, the output regulator status, is, [INIT, ], when the output regulator status is INIT )
+] ),
+
+comp( 
+[ 
+subComp(cond, Nil, if, the regulator init timeout, equals, [NORMAL, ], if the regulator init timeout equals NORMAL ),
+subComp(hidden, the regulator init timeout, whose, mode, is, [8, ], the regulator init timeout whose mode is 8 )
+] )
+
+]
+===========================================
+
+Req-4: while the alarm control that is 8 is INIT for at most 17 seconds , the output regulator status whose mode equals 2  shall be set to the Reset  , if the regulator status whose mode is 3 equals NORMAL within at most 16 seconds for at least 15 miliseconds  .
+[
+comp( 
+[ 
+subComp(actScope, Nil, while, the alarm control, is, [INIT, ], while the alarm control is INIT ),
+subComp(hidden, the alarm control, that, Nil, is, [8, ], the alarm control that is 8 ),
+subComp(v-time, for, at most, 17, seconds, [],  for at most 17 seconds)
+] ),
+
+comp( 
+[ 
+subComp(act, Nil, Nil, the output regulator status, shall be set, [the Reset, ], the output regulator status shall be set to the Reset),
+subComp(hidden, the output regulator status, whose, mode, equals, [2, ], the output regulator status whose mode equals 2 )
+] ),
+
+comp( 
+[ 
+subComp(cond, Nil, if, the regulator status, equals, [NORMAL, ], if the regulator status equals NORMAL ),
+subComp(hidden, the regulator status, whose, mode, is, [3, ], the regulator status whose mode is 3 ),
+subComp(pre-time, within, at most, 16, seconds, [],  within at most 16 seconds),
+subComp(v-time, for, at least, 15, miliseconds, [],  for at least 15 miliseconds)
+] )
+
+]
+===========================================
+
+Req-5: when the regulator init timeout that is 7 equals INIT every 8 miliseconds for at most 13 miliseconds , the monitor status that is 1  shall be set to the regulator init timeout  for 7 seconds within 20 seconds  .
+[
+comp( 
+[ 
+subComp(trig, Nil, when, the regulator init timeout, equals, [INIT, ], when the regulator init timeout equals INIT ),
+subComp(hidden, the regulator init timeout, that, Nil, is, [7, ], the regulator init timeout that is 7 ),
+subComp(in-time, every, , 8, miliseconds, [],  every 8 miliseconds),
+subComp(v-time, for, at most, 13, miliseconds, [],  for at most 13 miliseconds)
+] ),
+
+comp( 
+[ 
+subComp(act, Nil, Nil, the monitor status, shall be set, [the regulator init timeout, ], the monitor status shall be set to the regulator init timeout),
+subComp(hidden, the monitor status, that, Nil, is, [1, ], the monitor status that is 1 ),
+subComp(v-time, for, , 7, seconds, [],  for 7 seconds),
+subComp(pre-time, within, , 20, seconds, [],  within 20 seconds)
+] )
+
+]
+===========================================
+
+Req-6: if the output regulator status that equals 9 is NORMAL ,  the Reset shall be set to INIT  the Reset every at least 9 miliseconds within at most 14 miliseconds , when the monitor init timeout is  INIT every at most 25 seconds for 24 miliseconds , while the regulator init timeout that is 1 is INIT  .
+[
+comp( 
+[ 
+subComp(cond, Nil, if, the output regulator status, is, [NORMAL, ], if the output regulator status is NORMAL ),
+subComp(hidden, the output regulator status, that, Nil, equals, [9, ], the output regulator status that equals 9 )
+] ),
+
+comp( 
+[ 
+subComp(act, Nil, Nil, the Reset, shall be set, [INIT, ], the Reset shall be set to INIT),
+subComp(in-time, every, at least, 9, miliseconds, [],  every at least 9 miliseconds),
+subComp(pre-time, within, at most, 14, miliseconds, [],  within at most 14 miliseconds)
+] ),
+
+comp( 
+[ 
+subComp(trig, Nil, when, the monitor init timeout, is, [INIT, ], when the monitor init timeout is INIT ),
+subComp(in-time, every, at most, 25, seconds, [],  every at most 25 seconds),
+subComp(v-time, for, , 24, miliseconds, [],  for 24 miliseconds)
+] ),
+
+comp( 
+[ 
+subComp(precondScope, Nil, while, the regulator init timeout, is, [INIT, ], while the regulator init timeout is INIT ),
+subComp(hidden, the regulator init timeout, that, Nil, is, [1, ], the regulator init timeout that is 1 )
+] )
+
+]
+===========================================
+
+Req-7: the Reset whose mode equals 1  shall be set to INIT  for at least 17 miliseconds within 2 seconds , when the monitor mode equals  INIT every 27 seconds  .
+[
+comp( 
+[ 
+subComp(act, Nil, Nil, the Reset, shall be set, [INIT, ], the Reset shall be set to INIT),
+subComp(hidden, the Reset, whose, mode, equals, [1, ], the Reset whose mode equals 1 ),
+subComp(v-time, for, at least, 17, miliseconds, [],  for at least 17 miliseconds),
+subComp(pre-time, within, , 2, seconds, [],  within 2 seconds)
+] ),
+
+comp( 
+[ 
+subComp(trig, Nil, when, the monitor mode, equals, [INIT, ], when the monitor mode equals INIT ),
+subComp(in-time, every, , 27, seconds, [],  every 27 seconds)
+] )
+
+]
+===========================================
+
+Req-8: the monitor init timeout that equals 1  shall be set to INIT  within at least 12 miliseconds , after the output regulator status that is 7 is INIT for at least 23 seconds , if the monitor mode whose mode equals 5 is NORMAL for 26 seconds , after the monitor init timeout whose mode equals 3 is INIT  .
+[
+comp( 
+[ 
+subComp(act, Nil, Nil, the monitor init timeout, shall be set, [INIT, ], the monitor init timeout shall be set to INIT),
+subComp(hidden, the monitor init timeout, that, Nil, equals, [1, ], the monitor init timeout that equals 1 ),
+subComp(pre-time, within, at least, 12, miliseconds, [],  within at least 12 miliseconds)
+] ),
+
+comp( 
+[ 
+subComp(actScope, Nil, after, the output regulator status, is, [INIT, ], after the output regulator status is INIT ),
+subComp(hidden, the output regulator status, that, Nil, is, [7, ], the output regulator status that is 7 ),
+subComp(v-time, for, at least, 23, seconds, [],  for at least 23 seconds)
+] ),
+
+comp( 
+[ 
+subComp(cond, Nil, if, the monitor mode, is, [NORMAL, ], if the monitor mode is NORMAL ),
+subComp(hidden, the monitor mode, whose, mode, equals, [5, ], the monitor mode whose mode equals 5 ),
+subComp(v-time, for, , 26, seconds, [],  for 26 seconds)
+] ),
+
+comp( 
+[ 
+subComp(precondScope, Nil, after, the monitor init timeout, is, [INIT, ], after the monitor init timeout is INIT ),
+subComp(hidden, the monitor init timeout, whose, mode, equals, [3, ], the monitor init timeout whose mode equals 3 )
+] )
+
+]
+===========================================
+
+Req-9: when the regulator mode whose mode is 2 is INIT every at least 16 miliseconds for at least 21 seconds , before the heat control whose mode equals 3 is INIT for 14 miliseconds , the output monitor status whose mode is 1  shall be initialized to INIT  within 11 seconds every at most 27 seconds  .
+[
+comp( 
+[ 
+subComp(trig, Nil, when, the regulator mode, is, [INIT, ], when the regulator mode is INIT ),
+subComp(hidden, the regulator mode, whose, mode, is, [2, ], the regulator mode whose mode is 2 ),
+subComp(in-time, every, at least, 16, miliseconds, [],  every at least 16 miliseconds),
+subComp(v-time, for, at least, 21, seconds, [],  for at least 21 seconds)
+] ),
+
+comp( 
+[ 
+subComp(precondScope, Nil, before, the heat control, is, [INIT, ], before the heat control is INIT ),
+subComp(hidden, the heat control, whose, mode, equals, [3, ], the heat control whose mode equals 3 ),
+subComp(v-time, for, , 14, miliseconds, [],  for 14 miliseconds)
+] ),
+
+comp( 
+[ 
+subComp(act, Nil, Nil, the output monitor status, shall be initialized, [INIT, ], the output monitor status shall be initialized to INIT),
+subComp(hidden, the output monitor status, whose, mode, is, [1, ], the output monitor status whose mode is 1 ),
+subComp(pre-time, within, , 11, seconds, [],  within 11 seconds),
+subComp(in-time, every, at most, 27, seconds, [],  every at most 27 seconds)
+] )
+
+]
+===========================================
+
+Req-10: the heat control that is 1  shall be set to INIT  every at most 13 miliseconds for at least 9 seconds , while the output monitor status whose mode is 1 is INIT for at least 26 miliseconds  .
+[
+comp( 
+[ 
+subComp(act, Nil, Nil, the heat control, shall be set, [INIT, ], the heat control shall be set to INIT),
+subComp(hidden, the heat control, that, Nil, is, [1, ], the heat control that is 1 ),
+subComp(in-time, every, at most, 13, miliseconds, [],  every at most 13 miliseconds),
+subComp(v-time, for, at least, 9, seconds, [],  for at least 9 seconds)
+] ),
+
+comp( 
+[ 
+subComp(actScope, Nil, while, the output monitor status, is, [INIT, ], while the output monitor status is INIT ),
+subComp(hidden, the output monitor status, whose, mode, is, [1, ], the output monitor status whose mode is 1 ),
+subComp(v-time, for, at least, 26, miliseconds, [],  for at least 26 miliseconds)
+] )
+
+]
+===========================================
+
